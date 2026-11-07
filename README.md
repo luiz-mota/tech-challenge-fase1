@@ -11,7 +11,7 @@ Uma empresa de e-commerce enfrenta alta variabilidade no Net Promoter Score (NPS
 Este projeto tem dois objetivos principais:
 
 1. **Entender quais fatores operacionais** (logística, atendimento, perfil do cliente) realmente influenciam a satisfação do cliente, traduzindo dados em recomendações acionáveis para as áreas de negócio.
-2. **Propor um modelo preditivo** capaz de antecipar o NPS antes da aplicação da pesquisa, permitindo que a empresa aja de forma proativa.
+2. **Propor um modelo preditivo** capaz de antecipar o NPS antes da aplicação da pesquisa, permitindo que a empresa aja de forma proativa *(próximo passo, ver Escopo entregue)*.
 
 ---
 
@@ -75,16 +75,13 @@ O projeto segue o fluxo padrão de um projeto de Data Science orientado a negóc
 7. Recomendações para o negócio
 ```
 
-### Abordagem de modelagem
+### Escopo entregue
 
-O problema foi tratado como **classificação multiclasse** (Detrator / Neutro / Promotor), por oferecer saídas acionáveis diretamente pelos times de negócio.
-
-Modelos avaliados:
-- Baseline: Dummy Classifier (referência mínima)
-- Random Forest Classifier
-- XGBoost Classifier
-
-Métricas de avaliação: acurácia, F1-score macro, matriz de confusão e feature importance.
+Esta entrega cobre as etapas 1 a 3 e 7: entendimento do negócio, definição do
+alvo, análise exploratória e recomendações. A modelagem preditiva (etapas 4 a 6)
+ficou como próximo passo. O desenho previsto é tratar o problema como
+**classificação multiclasse** (Detrator / Neutro / Promotor), comparando um
+baseline (Dummy Classifier) com Random Forest e XGBoost por F1-score macro.
 
 ---
 
@@ -125,7 +122,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost jupyter
 jupyter notebook notebooks/
 ```
 
-4. Execute os notebooks na ordem indicada pela numeração dos arquivos (ex.: `01_eda.ipynb`, `02_modelo.ipynb`)
+4. Execute `01_eda.ipynb` (`02_modelo.ipynb` está reservado para a etapa de modelagem)
 
 ---
 
